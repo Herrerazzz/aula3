@@ -1,11 +1,13 @@
 const { Router } = require('express')
 
-const { hello1, hello2 } = require ('./controllers')
+const { createCart, getListOfCart, createuserCart } = require ('./controllers')
 
 const routes = Router()
 
-routes.get('/hello',hello1)
+routes.post('/cart',createCart)
 
-routes.get('/hello2', hello2)
+routes.get('/cart', getListofCart)
+
+routes.post('/cart/user-cart', createUserCart)
 
 module.exports = routes 
